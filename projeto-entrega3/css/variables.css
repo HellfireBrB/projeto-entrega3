@@ -1,0 +1,33 @@
+/* Variáveis de Design System */
+
+:root {
+  /* Paleta de Cores */
+  --color-primary: #007bff;
+  --color-primary-light: #66b2ff;
+  --color-secondary: #6c757d;
+  --color-secondary-light: #a6a9ad;
+  --color-neutral-dark: #343a40;
+  --color-neutral-light: #f8f9fa;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+
+  /* Tipografia */
+  --font-family-base: 'Arial', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+
+  /* Espaçamento */
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 48px;
+  --spacing-6: 64px;
+
+  /* Outros */
+  --border-radius: 4px;
+  --transition-speed: 0.3s;
+}

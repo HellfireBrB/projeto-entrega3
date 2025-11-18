@@ -1,0 +1,25 @@
+/* =========================
+   FILE: main.css
+   - Page-specific tweaks, utility classes, small JS hooks
+   ========================= */
+
+/* Header layout */
+.header .topbar{padding:0}
+.header .brand + .nav{margin-left:auto}
+
+/* Hero */
+.hero{background:linear-gradient(180deg, rgba(255,255,255,0.06), transparent);padding:var(--space-4);border-radius:12px;margin-bottom:var(--space-4)}
+.hero h1{font-size:var(--fs-5);margin-bottom:var(--space-2);color:var(--color-neutral-1)}
+.hero p{color:rgba(255,255,255,0.85)}
+
+/* Project card specifics */
+.project-image{height:160px;object-fit:cover;border-radius:8px}
+
+/* Small responsive tweaks */
+@media (max-width:576px){
+  .header .brand{font-size:var(--fs-4)}
+  .hero h1{font-size:var(--fs-4)}
+}
+
+/* JS hooks */
+[aria-hidden="true"]{display:none}

@@ -1,0 +1,79 @@
+/* =========================
+   FILE: base.css
+   - Reset minimal
+   - Design system variables
+   - Typography scale
+   - Utility helpers
+   ========================= */
+:root{
+  /* Color palette (8+ colors) */
+  --color-primary-1: #001F3F;
+  --color-primary-2: #003366;
+  --color-primary-3: #0055A5;
+  --color-primary-4: #1E88E5;
+
+  --color-secondary-1: #FCE4EC;
+  --color-secondary-2: #F8BBD0;
+  --color-secondary-3: #F06292;
+  --color-secondary-4: #C2185B;
+
+  --color-neutral-1: #FFFFFF;
+  --color-neutral-2: #F5F7FA;
+  --color-neutral-3: #E6EEF7;
+  --color-neutral-4: #CED8E6;
+  --color-neutral-5: #6B7280;
+  --color-neutral-6: #111827;
+
+  --success: #16A34A;
+  --warning: #F59E0B;
+  --danger:  #DC2626;
+
+  /* Typography (5 sizes min) */
+  --fs-1: 0.75rem;  /* 12px */
+  --fs-2: 0.875rem; /* 14px */
+  --fs-3: 1rem;     /* 16px */
+  --fs-4: 1.25rem;  /* 20px */
+  --fs-5: 1.75rem;  /* 28px */
+
+  /* Spacing scale (8px system) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* Border radius & shadows */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --shadow-sm: 0 1px 3px rgba(16,24,40,0.06);
+  --shadow-md: 0 8px 24px rgba(16,24,40,0.08);
+}
+
+/* Minimal reset */
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size:var(--fs-3);
+  color:var(--color-neutral-6);
+  background:var(--color-neutral-2);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+img{max-width:100%;height:auto;display:block}
+
+/* Utility helpers */
+.container{width:90%;max-width:1200px;margin:0 auto}
+.flex{display:flex}
+.flex-center{display:flex;align-items:center;justify-content:center}
+.mt-1{margin-top:var(--space-1)}
+.mt-2{margin-top:var(--space-2)}
+.p-1{padding:var(--space-1)}
+.p-2{padding:var(--space-2)}
+.text-muted{color:var(--color-neutral-5)}
+
+/* Accessibility focus */
+:focus{outline:3px solid rgba(30,136,229,0.15);outline-offset:2px}

@@ -1,0 +1,92 @@
+/* Importação de variáveis */
+@import url('variables.css');
+
+/* Atualização para modularização do CSS */
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+@import url('forms.css');
+@import url('main.css');
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografia Base */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  color: var(--color-neutral-dark);
+  background-color: var(--color-neutral-light);
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: var(--spacing-2);
+}
+
+header h1 {
+  font-size: var(--font-size-xl);
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: var(--spacing-2);
+  font-size: var(--font-size-md);
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Botões */
+button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+button:hover {
+  background-color: var(--color-primary-light);
+}
+
+button:disabled {
+  background-color: var(--color-secondary);
+  cursor: not-allowed;
+}
+
+/* Formulários */
+form {
+  display: grid;
+  gap: var(--spacing-2);
+}
+
+input, select {
+  padding: var(--spacing-1);
+  border: 1px solid var(--color-secondary-light);
+  border-radius: var(--border-radius);
+}
+
+input:focus, select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--color-neutral-dark);
+  color: #fff;
+  text-align: center;
+  padding: var(--spacing-2);
+}

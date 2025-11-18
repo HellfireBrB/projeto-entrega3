@@ -1,0 +1,19 @@
+/* =========================
+   FILE: forms.css
+   - Form styling, validation visual, fieldset, labels
+   ========================= */
+
+form{background:var(--color-neutral-1);padding:var(--space-3);border-radius:12px;box-shadow:var(--shadow-sm)}
+fieldset{border:1px solid var(--color-neutral-4);padding:var(--space-3);border-radius:8px;margin-bottom:var(--space-3)}
+legend{font-weight:700;padding:0 8px}
+label{display:block;font-weight:600;margin-bottom:8px}
+.input-row{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-2)}
+@media (max-width:576px){.input-row{grid-template-columns:1fr}}
+input[type="text"],input[type="email"],input[type="date"],select,textarea{
+  width:100%;padding:10px;border:1px solid var(--color-neutral-4);border-radius:8px;font-size:var(--fs-2)}
+input:focus,select:focus,textarea:focus{border-color:var(--color-primary-3);box-shadow:0 0 0 3px rgba(30,88,170,0.08)}
+
+/* Validation visual */
+input.valid{border-color:var(--success)}
+input.invalid{border-color:var(--danger)}
+.field-help{font-size:var(--fs-1);color:var(--color-neutral-5);margin-top:6px}

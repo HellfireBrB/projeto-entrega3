@@ -1,0 +1,79 @@
+/* =========================
+   FILE: layout.css
+   - Grid system (12 columns)
+   - Main layout (header / main / footer)
+   - Breakpoints (5+)
+   ========================= */
+
+/* Breakpoints */
+:root{
+  --bp-xxl: 1400px;
+  --bp-xl: 1200px;
+  --bp-lg: 992px;
+  --bp-md: 768px;
+  --bp-sm: 576px;
+}
+
+/* Page skeleton */
+.page{
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  min-height:100vh;
+}
+
+/* Header */
+.header{
+  background:linear-gradient(90deg,var(--color-primary-2),var(--color-primary-3));
+  color:var(--color-neutral-1);
+  padding:calc(var(--space-2));
+}
+.header .topbar{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2)}
+.header .brand{font-weight:700;font-size:var(--fs-5)}
+
+/* Navigation */
+.nav{display:flex;gap:var(--space-2);align-items:center}
+.nav a{color:inherit;text-decoration:none;padding:8px 12px;border-radius:8px}
+.nav a:hover{background:rgba(255,255,255,0.06)}
+
+/* Container grid: 12 columns */
+.grid-12{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:var(--space-3);
+}
+
+/* Column helpers: use classes like col-6, col-4 */
+[class*="col-"]{grid-column:auto/span 12}
+.col-1{grid-column:span 1}
+.col-2{grid-column:span 2}
+.col-3{grid-column:span 3}
+.col-4{grid-column:span 4}
+.col-6{grid-column:span 6}
+.col-12{grid-column:span 12}
+
+/* Main content */
+.main{padding:var(--space-4) 0}
+
+/* Footer */
+.footer{background:var(--color-neutral-6);color:var(--color-neutral-1);padding:var(--space-3);text-align:center}
+
+/* Responsive behavior (5 breakpoints) */
+@media (max-width:var(--bp-xxl)){
+  .container{width:92%}
+}
+@media (max-width:var(--bp-xl)){
+  .nav{gap:var(--space-1)}
+}
+@media (max-width:var(--bp-lg)){
+  .col-6{grid-column:span 6}
+}
+@media (max-width:var(--bp-md)){
+  .grid-12{grid-template-columns:repeat(6,1fr)}
+  [class*="col-"]{grid-column:auto/span 6}
+  .col-4{grid-column:span 6}
+}
+@media (max-width:var(--bp-sm)){
+  .grid-12{grid-template-columns:repeat(2,1fr)}
+  [class*="col-"]{grid-column:auto/span 2}
+  .nav{display:none}
+}

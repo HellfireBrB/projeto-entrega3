@@ -1,0 +1,55 @@
+/* =========================
+   FILE: components.css
+   - Cards, buttons, badges, toasts, modal, nav dropdown
+   ========================= */
+
+/* Card */
+.card{
+  background:var(--color-neutral-1);
+  border-radius:var(--radius-md);
+  padding:var(--space-3);
+  box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;gap:var(--space-2);
+}
+.card .card-title{font-size:var(--fs-4);font-weight:700}
+.card .card-body{font-size:var(--fs-2);color:var(--color-neutral-5)}
+
+/* Card grid for projects */
+.cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3)
+}
+@media (max-width:992px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:576px){.cards{grid-template-columns:1fr}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--color-primary-3);color:var(--color-neutral-1)}
+.btn-primary:hover{background:var(--color-primary-4)}
+.btn-secondary{background:transparent;border:1px solid var(--color-neutral-4);color:var(--color-neutral-6)}
+.btn:disabled{opacity:0.5;cursor:not-allowed}
+
+/* Badges */
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:var(--fs-1);background:var(--color-neutral-4);color:var(--color-neutral-6)}
+
+/* Toast / Alert (simple) */
+.toast{position:fixed;right:var(--space-3);bottom:var(--space-3);min-width:220px;padding:12px;border-radius:8px;box-shadow:var(--shadow-md);display:none}
+.toast.show{display:block}
+.toast--success{background:var(--success);color:#fff}
+.toast--danger{background:var(--danger);color:#fff}
+
+/* Modal (basic) */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.35);display:none;align-items:center;justify-content:center}
+.modal-backdrop.show{display:flex}
+.modal{background:var(--color-neutral-1);padding:var(--space-3);border-radius:12px;max-width:720px;width:90%}
+
+/* Nav dropdown */
+.nav-item{position:relative}
+.submenu{position:absolute;top:calc(100% + 6px);left:0;background:var(--color-neutral-1);padding:8px;border-radius:8px;box-shadow:var(--shadow-sm);display:none;min-width:200px}
+.nav-item:hover .submenu{display:block}
+
+/* Hamburger (hidden on desktop) */
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:24px;height:3px;background:var(--color-neutral-1);border-radius:2px}
+@media (max-width:var(--bp-sm)){
+  .hamburger{display:flex}
+}
